@@ -1,6 +1,8 @@
-# Rime Input Schema for Ugaritic Cuneiform 
+# Rime Ugaritic Cuneiform 
 
 Recipe name: ℞ `laubonghaudoi/rime-ugaritic`
+
+[Ugaritic](https://en.wikipedia.org/wiki/Ugaritic)
 
 ## Key Mappings:
 
