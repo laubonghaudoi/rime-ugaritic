@@ -1,0 +1,50 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: ugaritic
+  name: Ugaritic Cuneiform
+  version: "0.1"
+  author:
+    - laubonghaudoi <laubonghaudoi@icloud.com>
+
+  description:
+    Input Cuneiforms in the Ugaritic language.
+    https://en.wikipedia.org/wiki/Ugaritic
+
+engine:
+  processors:
+    - ascii_composer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    # - script_translator
+    - table_translator
+  filters:
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba[]\;'
+  delimiter: ' '
+  auto_select: true
+  
+translator:
+  dictionary: ugaritic
+  enable_sentence: false
+  enable_user_dict: false
+  comment_format:
+    - xform/^~//
+    
+  key_binder:
+    import_preset: default
